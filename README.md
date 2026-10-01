@@ -4,8 +4,10 @@ Talleres del Semillero Sapientiam (ETITC) para capacitar a otros grupos. Cada
 taller es una presentación que corre en el navegador, con vista presentador,
 guion y una guía en PDF para llevar a casa.
 
-En la web del repo (GitHub Pages) está el catálogo: desde ahí se abre cada
-presentación y se descargan la presentación y la guía en PDF.
+**Web: <https://sapientiam-etitc.github.io/capacitaciones/>**
+
+Ahí está el catálogo: desde él se abre cada presentación y se descargan la
+presentación y la guía en PDF.
 
 ## Dictar un taller
 
