@@ -1,0 +1,13 @@
+{
+  "name": "capacitaciones-sapientiam",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Capacitaciones del Semillero Sapientiam · ETITC: presentaciones, guiones y guías a partir de un solo content.js",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "nuevo": "node _base/herramientas/nuevo.mjs",
+    "pdf": "node _base/herramientas/pdf.mjs",
+    "catalogo": "node _base/herramientas/catalogo.mjs",
+    "verificar": "node _base/herramientas/verificar.mjs"
+  }
+}

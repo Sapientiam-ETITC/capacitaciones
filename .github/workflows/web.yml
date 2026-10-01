@@ -1,0 +1,47 @@
+# Revisa los talleres en cada pull request y publica la web al llegar a main.
+# Los PDF no se generan aquí: vienen en el repo, hechos en el equipo de quien
+# contribuye, para que emojis y fuentes salgan como se proyectan.
+name: Web
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: web-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # Sin dependencias: no hace falta instalar nada
+      - run: node _base/herramientas/verificar.mjs
+
+  publicar:
+    if: github.event_name != 'pull_request'
+    needs: verificar
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: pages
+        uses: actions/deploy-pages@v4

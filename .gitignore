@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+
+# Material de origen que no se publica: decks de cohortes anteriores, logos
+# sin procesar y guiones de sesiones ya dictadas. Se quedan en el disco.
+fuente/
+originales/
+estructura.pdf
