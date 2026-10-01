@@ -4,7 +4,7 @@ Talleres del Semillero Sapientiam (ETITC) para capacitar a otros grupos. Cada
 taller es una presentación que corre en el navegador, con vista presentador,
 guion y una guía en PDF para llevar a casa.
 
-**Web: <https://sapientiam-etitc.github.io/capacitaciones/>**
+**Web: <https://capacitaciones.sapientiam-etitc.org/>**
 
 Ahí está el catálogo: desde él se abre cada presentación y se descargan la
 presentación y la guía en PDF.
